@@ -20,6 +20,7 @@ git clone https://github.com/iliafreedive-del/skills
 | [awesome-gamedev-agent-skills](https://github.com/gamedev-skills/awesome-gamedev-agent-skills) | 72 + `router` | Геймдев: движки (three.js, Phaser, PixiJS, Godot, Unity, Unreal…), жанры (RPG, рогалик…), дисциплины (game feel, UI/UX, камера, сохранения, производительность, звук). `router` сам выбирает нужные | Apache-2.0 |
 | [ponytail](https://github.com/DietrichGebert/ponytail) | 6 | Режим «ленивого сеньора»: самая маленькая правка, которая решает задачу; аудит, ревью, техдолг | MIT |
 | [graphify](https://github.com/Graphify-Labs/graphify) | 1 | База знаний: строит граф проекта (код, документы, картинки) в `graphify-out/` и отвечает на вопросы по нему. Нужен Python-пакет `graphifyy` | Apache-2.0 |
+| [everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 11 | Рабочий процесс разработки: `verification-loop` (проверка перед сдачей), `eval-harness` (проверки «готово» до кода), `tdd-workflow`, `coding-standards`, `frontend-patterns`, `security-checklist`, `continuous-learning`, `strategic-compact` и др. Агенты, команды, правила и хуки пака лежат в `extras/everything-claude-code/` | MIT (по README) |
 | [agentskills](https://github.com/agentskills/agentskills) | — | Спецификация формата и валидатор `tools/skills-ref` | Apache-2.0 |
 
 Для веб-игры на three.js главные: `router`, `threejs-scene-setup`, `threejs-gltf-loading`, `threejs-materials-lighting`, `performance-optimization`, `game-feel`, `game-ui-ux`, `camera-systems`, `input-systems`, `save-systems`, `audio-design`, `rpg`, `roguelike`, `level-design`, `create-game-assets`, `graphify`, `ponytail`.
@@ -34,6 +35,8 @@ for d in skills/*/; do skills-ref validate "$d"; done
 ```
 
 Все скилы проходят проверку; у `ponytail` есть поле `argument-hint`, его нет в базовой спецификации, но Claude Code его понимает.
+
+Из everything-claude-code: скил `security-review` переименован в `security-checklist`, чтобы не перекрывать встроенную команду Claude Code `/security-review`; у `eval-harness`, `verification-loop` и `project-guidelines-example` не было заголовка `name`/`description`, он добавлен.
 
 Лицензии и NOTICE исходных паков лежат в `licenses/`.
 
@@ -123,3 +126,14 @@ for d in skills/*/; do skills-ref validate "$d"; done
 | `unreal-niagara` | Create and control VFX in Unreal Engine 5 with Niagara: systems and emitters, modules and the spawn/update stages, exposed User parameters, and spawni… |
 | `unreal-packaging` | Package and ship an Unreal Engine 5 project: the Platforms menu Package Project flow, build configurations (Development vs Shipping), cooking content,… |
 | `visual-novel` | Build a visual novel: a branching script, character and background display, a text box with choices, save/load, backlog, and skip/auto. Use for a VN, … |
+| `backend-patterns` | Backend architecture patterns, API design, database optimization, and server-side best practices for Node.js, Express, and Next.js API routes. |
+| `clickhouse-io` | ClickHouse database patterns, query optimization, analytics, and data engineering best practices for high-performance analytical workloads. |
+| `coding-standards` | Universal coding standards, best practices, and patterns for TypeScript, JavaScript, React, and Node.js development. |
+| `continuous-learning` | Automatically extract reusable patterns from Claude Code sessions and save them as learned skills for future use. |
+| `eval-harness` | Eval-driven development for Claude Code sessions: define capability and regression evals before coding, run them, and track pass@k. Use when adding a … |
+| `frontend-patterns` | Frontend development patterns for React, Next.js, state management, performance optimization, and UI best practices. |
+| `project-guidelines-example` | Example template of a project-specific guidelines skill (architecture, file layout, code patterns, testing, deployment). Use as a starting point when … |
+| `security-checklist` | Use this skill when adding authentication, handling user input, working with secrets, creating API endpoints, or implementing payment/sensitive featur… |
+| `strategic-compact` | Suggests manual context compaction at logical intervals to preserve context through task phases rather than arbitrary auto-compaction. |
+| `tdd-workflow` | Use this skill when writing new features, fixing bugs, or refactoring code. Enforces test-driven development with 80%+ coverage including unit, integr… |
+| `verification-loop` | Run a full verification pass before calling work done or opening a PR: build, typecheck, lint, tests, security scan, diff review, and a final report. … |
