@@ -21,9 +21,10 @@ git clone https://github.com/iliafreedive-del/skills
 | [ponytail](https://github.com/DietrichGebert/ponytail) | 6 | Режим «ленивого сеньора»: самая маленькая правка, которая решает задачу; аудит, ревью, техдолг | MIT |
 | [graphify](https://github.com/Graphify-Labs/graphify) | 1 | База знаний: строит граф проекта (код, документы, картинки) в `graphify-out/` и отвечает на вопросы по нему. Нужен Python-пакет `graphifyy` | Apache-2.0 |
 | [everything-claude-code](https://github.com/affaan-m/everything-claude-code) | 11 | Рабочий процесс разработки: `verification-loop` (проверка перед сдачей), `eval-harness` (проверки «готово» до кода), `tdd-workflow`, `coding-standards`, `frontend-patterns`, `security-checklist`, `continuous-learning`, `strategic-compact` и др. Агенты, команды, правила и хуки пака лежат в `extras/everything-claude-code/` | MIT (по README) |
+| [img2threejs](https://github.com/img2threejs/img2threejs) | 1 | Картинка → 3D-модель в коде three.js: по референсу (персонаж, предмет, оружие, постройка) собирает процедурную модель проход за проходом, сверяя скриншоты с картинкой; умеет риг под анимацию и экспорт. Утилиты `forge/` на чистом Python 3.10, без pip | Apache-2.0 |
 | [agentskills](https://github.com/agentskills/agentskills) | — | Спецификация формата и валидатор `tools/skills-ref` | Apache-2.0 |
 
-Для веб-игры на three.js главные: `router`, `threejs-scene-setup`, `threejs-gltf-loading`, `threejs-materials-lighting`, `performance-optimization`, `game-feel`, `game-ui-ux`, `camera-systems`, `input-systems`, `save-systems`, `audio-design`, `rpg`, `roguelike`, `level-design`, `create-game-assets`, `graphify`, `ponytail`.
+Для веб-игры на three.js главные: `router`, `threejs-scene-setup`, `threejs-gltf-loading`, `threejs-materials-lighting`, `performance-optimization`, `game-feel`, `game-ui-ux`, `camera-systems`, `input-systems`, `save-systems`, `audio-design`, `rpg`, `roguelike`, `level-design`, `create-game-assets`, `graphify`, `ponytail`, `img2threejs` (модели по картинке).
 
 Из папки не вошёл `OmniRoute-release-v3.8.52.zip`: это отдельное приложение-шлюз для ИИ-моделей (209 МБ), а не скил.
 
@@ -39,6 +40,8 @@ for d in skills/*/; do skills-ref validate "$d"; done
 Из everything-claude-code: скил `security-review` переименован в `security-checklist`, чтобы не перекрывать встроенную команду Claude Code `/security-review`; у `eval-harness`, `verification-loop` и `project-guidelines-example` не было заголовка `name`/`description`, он добавлен.
 
 Лицензии и NOTICE исходных паков лежат в `licenses/`.
+
+Из img2threejs не взята папка `.github` (CI и шаблоны исходного репозитория); её утилиты `forge/` ставятся вместе со скилом и запускаются из папки скила.
 
 ## Каталог
 
@@ -73,6 +76,7 @@ for d in skills/*/; do skills-ref validate "$d"; done
 | `godot-tilemap` | Build and edit tile-based 2D levels in Godot 4.7 with TileMapLayer and TileSet: paint layers, set up collision/navigation/custom-data on tiles, autoti… |
 | `godot-ui-control` | Build Godot 4.7 user interfaces with Control nodes: anchors and offsets for responsive layout, Container nodes (VBox/HBox/Grid/Margin) for automatic a… |
 | `graphify` | Use for any question about a codebase, its architecture, file relationships, or project content — especially when graphify-out/ exists, where the ques… |
+| `img2threejs` | Turn an object or character reference image into a quality-gated, animation-ready procedural Three.js model built in code. Use for image-to-3D reconstruction, detail-accurate object rebuilds… |
 | `input-systems` | Architect game input — action mapping (abstracting keys into named actions), rebinding with conflict detection and persistence, multi-device support (… |
 | `itch-publish` | Publish and update a game on itch.io: create the project page and upload builds with the butler CLI (butler push) to named channels. Use for itch.io p… |
 | `level-design` | Design and build playable levels — the blockout/whitebox-to-playable workflow, player metrics and grid layout, pacing and flow (tension/rest curve), g… |
