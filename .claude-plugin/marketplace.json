@@ -1,0 +1,52 @@
+{
+  "name": "iliafreedive-skills",
+  "description": "Библиотека скилов Ильи Ефанова для всех проектов: геймдев, студия, музыка, 3D, разработка, маркетинг.",
+  "owner": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "plugins": [
+    {
+      "name": "gamedev",
+      "source": "./plugins/gamedev",
+      "description": "Геймдев: движки (three.js, Phaser, PixiJS, Godot, Unity, Unreal, Roblox…), жанры и дисциплины. Скил router сам выбирает нужные.",
+      "category": "skills"
+    },
+    {
+      "name": "game-studios",
+      "source": "./plugins/game-studios",
+      "description": "Claude Code Game Studios: 49 агентов-ролей студии (директора, программисты, дизайнеры, QA) и 74 скила процесса от идеи до релиза. Агенты работают в Cowork и Claude Code.",
+      "category": "skills"
+    },
+    {
+      "name": "game-tools-setup",
+      "source": "./plugins/game-tools-setup",
+      "description": "Инструкции по установке внешних инструментов: Godot MCP, UnrealClaude, NVIDIA Audio2Face-3D.",
+      "category": "skills"
+    },
+    {
+      "name": "acestep-music",
+      "source": "./plugins/acestep-music",
+      "description": "Музыка через ACE-Step 1.5: генерация и ремикс песен, тексты, обложки, клипы, расшифровка текста. Нужен запущенный сервер ACE-Step.",
+      "category": "skills"
+    },
+    {
+      "name": "img2threejs",
+      "source": "./plugins/img2threejs",
+      "description": "Картинка в процедурную 3D-модель three.js с проверкой по скриншотам.",
+      "category": "skills"
+    },
+    {
+      "name": "dev-workflow",
+      "source": "./plugins/dev-workflow",
+      "description": "Рабочий процесс разработки: ponytail (минимальные правки, аудит), graphify (граф знаний проекта), everything-claude-code (проверка перед сдачей, TDD, стандарты, безопасность).",
+      "category": "skills"
+    },
+    {
+      "name": "marketing",
+      "source": "./plugins/marketing",
+      "description": "50 маркетинговых скилов: SEO, реклама, копирайтинг, запуск, аналитика, цены, рассылки, соцсети.",
+      "category": "skills"
+    }
+  ]
+}

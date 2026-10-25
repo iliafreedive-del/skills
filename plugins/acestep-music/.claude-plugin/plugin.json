@@ -1,0 +1,11 @@
+{
+  "name": "acestep-music",
+  "displayName": "ACE-Step music",
+  "description": "Музыка через ACE-Step 1.5: генерация и ремикс песен, тексты, обложки, клипы, расшифровка текста. Нужен запущенный сервер ACE-Step.",
+  "author": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "homepage": "https://github.com/ace-step/ACE-Step-1.5",
+  "license": "MIT"
+}

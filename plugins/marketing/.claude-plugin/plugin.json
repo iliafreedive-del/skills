@@ -1,0 +1,11 @@
+{
+  "name": "marketing",
+  "displayName": "Marketing",
+  "description": "50 маркетинговых скилов: SEO, реклама, копирайтинг, запуск, аналитика, цены, рассылки, соцсети.",
+  "author": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "homepage": "https://github.com/coreyhaines31/marketingskills",
+  "license": "MIT"
+}
