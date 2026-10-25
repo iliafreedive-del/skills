@@ -1,0 +1,11 @@
+{
+  "name": "game-tools-setup",
+  "displayName": "Game tools setup",
+  "description": "Инструкции по установке внешних инструментов: Godot MCP, UnrealClaude, NVIDIA Audio2Face-3D.",
+  "author": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "homepage": "https://github.com/iliafreedive-del/skills",
+  "license": "MIT"
+}

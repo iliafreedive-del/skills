@@ -1,0 +1,11 @@
+{
+  "name": "game-studios",
+  "displayName": "Game Studios",
+  "description": "Claude Code Game Studios: 49 агентов-ролей студии (директора, программисты, дизайнеры, QA) и 74 скила процесса от идеи до релиза. Агенты работают в Cowork и Claude Code.",
+  "author": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "homepage": "https://github.com/Donchitos/Claude-Code-Game-Studios",
+  "license": "MIT"
+}

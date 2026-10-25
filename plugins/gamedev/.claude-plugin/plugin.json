@@ -1,0 +1,11 @@
+{
+  "name": "gamedev",
+  "displayName": "Gamedev",
+  "description": "Геймдев: движки (three.js, Phaser, PixiJS, Godot, Unity, Unreal, Roblox…), жанры и дисциплины. Скил router сам выбирает нужные.",
+  "author": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "homepage": "https://github.com/gamedev-skills/awesome-gamedev-agent-skills",
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "dev-workflow",
+  "displayName": "Dev workflow",
+  "description": "Рабочий процесс разработки: ponytail (минимальные правки, аудит), graphify (граф знаний проекта), everything-claude-code (проверка перед сдачей, TDD, стандарты, безопасность).",
+  "author": {
+    "name": "Илья Ефанов",
+    "url": "https://github.com/iliafreedive-del"
+  },
+  "homepage": "https://github.com/iliafreedive-del/skills",
+  "license": "MIT / Apache-2.0"
+}
