@@ -55,6 +55,30 @@ for d in plugins/*/skills/*/; do skills-ref validate "$d"; done
 
 Лицензии и NOTICE исходных паков лежат в `licenses/`. Из папки на Яндекс Диске не вошёл `OmniRoute-release-v3.8.52.zip`: это приложение-шлюз для ИИ-моделей, а не скил.
 
+## Как добавить новый скил
+
+Все скилы для всех проектов живут только здесь, в `plugins/<плагин>/skills/<скил>/SKILL.md`. Claude в любом проекте и claude.ai читают ветку по умолчанию этого репозитория, поэтому скил виден всем, как только он слит в неё.
+
+1. Проверь, что найденное на GitHub действительно скил: в папке лежит `SKILL.md` с шапкой `name:` и `description:`. Репозиторий с `backend/`, `src/`, `docker-compose.yml` и своими ключами API — это приложение, а не скил, его сюда не кладут.
+2. Проверь, нет ли его уже: `ls plugins/*/skills | grep имя` или таблицы каталога ниже.
+3. Скачай его в нужный плагин скриптом:
+
+```bash
+python3 tools/add-skill.py https://github.com/owner/repo --plugin gamedev                              # все скилы репозитория
+python3 tools/add-skill.py https://github.com/owner/repo/tree/main/skills/foo --plugin dev-workflow     # один скил
+python3 tools/add-skill.py owner/repo --plugin new-pack --agents --description "Что даёт плагин"         # новый плагин вместе с агентами
+python3 tools/add-skill.py owner/repo --list                                                           # только посмотреть, что там есть
+python3 tools/add-skill.py ~/Downloads/my-skill --plugin gamedev                                       # из папки на диске
+```
+
+   Скрипт клонирует репозиторий, копирует папки со `SKILL.md` в `plugins/<плагин>/skills/`, кладёт лицензию источника в `licenses/`, для нового плагина создаёт `plugins/<плагин>/.claude-plugin/plugin.json` и дописывает его в `.claude-plugin/marketplace.json`, запускает `claude plugin validate .` и печатает готовые строки для таблицы каталога. Вручную то же самое: скопировать папку скила в `plugins/<плагин>/skills/` и пройти этот список.
+4. Допиши скил в каталог ниже и поправь число скилов в первой строке этого файла.
+5. Закоммить в новую ветку, запушь и открой PR в ветку по умолчанию. После слияния claude.ai подтянет скил сам (**Sync automatically**) или по кнопке **Check for updates** у маркетплейса; новый плагин нужно один раз нажать **Add**. В Claude Code из терминала: `claude plugin update имя-плагина@iliafreedive-skills`.
+
+Проще всего попросить Claude в любом проекте: «добавь скил ссылка в библиотеку скилов». Он пройдёт шаги 1–5 и пришлёт PR.
+
+Куда класть: инструменты для игр и движков в `gamedev`, роли студии и процесс в `game-studios`, разработка и проверка кода в `dev-workflow`, маркетинг в `marketing`. Большой чужой пак заводи отдельным плагином, чтобы его можно было включать и обновлять независимо.
+
 ## Каталог
 
 ### gamedev
